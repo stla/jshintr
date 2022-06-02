@@ -1,0 +1,16 @@
+#jshintr-body {
+  overflow: auto;
+}
+
+.jshintr-label {
+  font-weight: bold;
+}
+
+#jshintr-tblBody>tr>td>code {
+  font-weight: bold;
+  color: navy;
+}
+
+.jshintr-center {
+  text-align: center;
+}

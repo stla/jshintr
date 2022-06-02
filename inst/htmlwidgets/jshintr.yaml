@@ -1,0 +1,9 @@
+dependencies:
+  - name: JSHint
+    version: 2.13.4
+    src: htmlwidgets/lib
+    script: jshint.js
+  - name: jshintr-stylesheet
+    version: 0.0.1
+    src: htmlwidgets/lib
+    stylesheet: jshintr.css
