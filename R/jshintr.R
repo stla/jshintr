@@ -3,6 +3,7 @@
 widget_html.jshintr <- function(id, style, class, ...) {
   tags$div(
     id = "jshintr-body",
+    tags$div(id = "jshintr-file"),
     tags$div(
       id = "jshintr-radio",
       class = "jshintr-radio-container",
@@ -134,6 +135,7 @@ jshintr <- function(filepath, width = NULL, height = "auto", elementId = NULL) {
 
   # forward options using x
   x <- list(
+    filename = basename(filepath),
     source = source
   )
 

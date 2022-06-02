@@ -3,6 +3,11 @@
   background-color: azure;
 }
 
+#jshintr-file {
+  text-decoration: underline;
+  text-align: center;
+}
+
 #jshintr-radio {
   background-color: seashell;
   padding: 3px;

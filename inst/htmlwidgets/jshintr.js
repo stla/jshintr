@@ -42,7 +42,8 @@ HTMLWidgets.widget({
 
     return {
       renderValue: function (x) {
-        // TODO: code to render the widget, e.g.
+        const p_file = document.getElementById("jshintr-file");
+        p_file.appendChild(document.createTextNode(x.filename));
         JSHINT(x.source, { esversion: 6 });
         let errs = JSHINT.errors;
         fillTable(errs);
