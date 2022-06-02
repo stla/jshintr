@@ -121,15 +121,31 @@ widget_html.jshintr <- function(id, style, class, ...) {
   )
 }
 
-
-#' <Add Title>
+#' @title Lint a Javascript file
+#' @description HTML widget which runs 'jshint' on the given JavaScript file.
 #'
-#' <Add Description>
+#' @param filepath path to a JavaScript file
+#' @param width,height dimensions (CSS properties)
+#' @param elementId a HTML id for the widget (usually useless)
+#'
+#' @return No returned value, the function just runs the widget.
+#' @export
 #'
 #' @importFrom htmlwidgets createWidget
+#' @importFrom tools file_ext
 #'
-#' @export
+#' @note You can also run this widget as a RStudio addin.
+#'
+#' @examples
+#' jsfile <- system.file("jsexample.js", package = "jshintr")
+#' cat(readLines(jsfile), sep = "\n")
+#' jshintr(jsfile)
 jshintr <- function(filepath, width = NULL, height = "auto", elementId = NULL) {
+
+  ext <- tolower(file_ext(filepath))
+  if(ext != "js"){
+    stop("This file is not a JavaScript file.")
+  }
 
   source <- paste0(readLines(filepath), collapse = "\n")
 
