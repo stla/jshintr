@@ -1,3 +1,5 @@
+#' @importFrom htmltools tags
+#' @noRd
 widget_html.jshintr <- function(id, style, class, ...) {
   tags$div(
     id = "jshintr-body",
@@ -122,10 +124,10 @@ widget_html.jshintr <- function(id, style, class, ...) {
 #'
 #' <Add Description>
 #'
-#' @import htmlwidgets
+#' @importFrom htmlwidgets createWidget
 #'
 #' @export
-jshintr <- function(filepath, width = NULL, height = NULL, elementId = NULL) {
+jshintr <- function(filepath, width = NULL, height = "auto", elementId = NULL) {
 
   source <- paste0(readLines(filepath), collapse = "\n")
 
@@ -135,7 +137,7 @@ jshintr <- function(filepath, width = NULL, height = NULL, elementId = NULL) {
   )
 
   # create widget
-  htmlwidgets::createWidget(
+  createWidget(
     name = 'jshintr',
     x,
     width = width,
@@ -143,32 +145,4 @@ jshintr <- function(filepath, width = NULL, height = NULL, elementId = NULL) {
     package = 'jshintr',
     elementId = elementId
   )
-}
-
-#' Shiny bindings for jshintr
-#'
-#' Output and render functions for using jshintr within Shiny
-#' applications and interactive Rmd documents.
-#'
-#' @param outputId output variable to read from
-#' @param width,height Must be a valid CSS unit (like \code{'100\%'},
-#'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
-#'   string and have \code{'px'} appended.
-#' @param expr An expression that generates a jshintr
-#' @param env The environment in which to evaluate \code{expr}.
-#' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
-#'   is useful if you want to save an expression in a variable.
-#'
-#' @name jshintr-shiny
-#'
-#' @export
-jshintrOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'jshintr', width, height, package = 'jshintr')
-}
-
-#' @rdname jshintr-shiny
-#' @export
-renderJshintr <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, jshintrOutput, env, quoted = TRUE)
 }

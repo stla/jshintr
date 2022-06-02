@@ -41,6 +41,15 @@ HTMLWidgets.widget({
         JSHINT(x.source, { esversion: 6 });
         let errs = JSHINT.errors;
         fillTable(errs);
+        document.body.addEventListener("change", function (e) {
+          let target = e.target;
+          if (target.name === "jshintr-radio") {
+            document.getElementById("jshintr-tblBody").innerHTML = "";
+            JSHINT(x.source, { esversion: target.value });
+            let errs = JSHINT.errors;
+            fillTable(errs);
+          }
+        });
       },
 
       resize: function (width, height) {
