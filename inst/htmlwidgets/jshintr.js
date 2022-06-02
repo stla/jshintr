@@ -16,6 +16,11 @@ HTMLWidgets.widget({
       "id"
     ];
     function fillTable(errs) {
+      if(errs.length === 0) {
+        const prgrph = document.getElementById("jshintr-p");
+        prgrph.appendChild(document.createTextNode("No error found."));
+        return;
+      }
       const tbl = document.getElementById("jshintr-tblBody");
       for (let i = 0; i < errs.length; i++) {
         const tr = tbl.insertRow();
@@ -47,6 +52,7 @@ HTMLWidgets.widget({
             document.getElementById("jshintr-tblBody").innerHTML = "";
             JSHINT(x.source, { esversion: target.value });
             let errs = JSHINT.errors;
+            document.getElementById("jshintr-p").innerHTML = "";
             fillTable(errs);
           }
         });

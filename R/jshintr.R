@@ -114,7 +114,8 @@ widget_html.jshintr <- function(id, style, class, ...) {
             id = "jshintr-tblBody"
           )
         )
-      )
+      ),
+      tags$p(id = "jshintr-p")
     )
   )
 }

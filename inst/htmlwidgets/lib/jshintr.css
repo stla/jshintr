@@ -2,6 +2,11 @@
   overflow: auto;
 }
 
+#jshintr-radio {
+  background-color: seashell;
+  padding: 3px;
+}
+
 .jshintr-label {
   font-weight: bold;
 }
@@ -13,4 +18,8 @@
 
 .jshintr-center {
   text-align: center;
+}
+
+#jshintr-p {
+  font-style: italic;
 }
