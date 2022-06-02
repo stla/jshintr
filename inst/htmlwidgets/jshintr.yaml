@@ -4,6 +4,6 @@ dependencies:
     src: htmlwidgets/lib
     script: jshint.js
   - name: jshintr-stylesheet
-    version: 0.0.1
+    version: 0.1.0
     src: htmlwidgets/lib
     stylesheet: jshintr.css

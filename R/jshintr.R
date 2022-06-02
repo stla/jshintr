@@ -133,17 +133,17 @@ jshintr <- function(filepath, width = NULL, height = "auto", elementId = NULL) {
   source <- paste0(readLines(filepath), collapse = "\n")
 
   # forward options using x
-  x = list(
+  x <- list(
     source = source
   )
 
   # create widget
   createWidget(
-    name = 'jshintr',
+    name = "jshintr",
     x,
     width = width,
     height = height,
-    package = 'jshintr',
+    package = "jshintr",
     elementId = elementId
   )
 }

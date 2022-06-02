@@ -3,3 +3,6 @@
 export(jshintr)
 importFrom(htmltools,tags)
 importFrom(htmlwidgets,createWidget)
+importFrom(rstudioapi,documentPath)
+importFrom(rstudioapi,hasFun)
+importFrom(tools,file_ext)

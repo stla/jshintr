@@ -1,5 +1,6 @@
 #jshintr-body {
   overflow: auto;
+  background-color: azure;
 }
 
 #jshintr-radio {
@@ -9,6 +10,11 @@
 
 .jshintr-label {
   font-weight: bold;
+  font-family: Helvetica;
+}
+
+#jshintr-tbl {
+  background-color: lemonchiffon;
 }
 
 #jshintr-tblBody>tr>td>code {

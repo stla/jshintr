@@ -1,0 +1,4 @@
+Name: Hint current JS file
+Description: Run 'jshint' on the current file.
+Binding: jshintAddin
+Interactive: true
