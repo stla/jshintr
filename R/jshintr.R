@@ -128,7 +128,7 @@ widget_html.jshintr <- function(id, style, class, ...) {
 #' @param width,height dimensions (CSS properties)
 #' @param elementId a HTML id for the widget (usually useless)
 #'
-#' @return No returned value, the function just runs the widget.
+#' @return A \code{htmlwidget} object.
 #' @export
 #'
 #' @importFrom htmlwidgets createWidget

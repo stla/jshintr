@@ -1,22 +1,23 @@
-Package: jshintr
 Type: Package
-Title: Lint 'JavaScript' Files with a R Command or a 'RStudio' Addin
+Package: jshintr
+Title: Lint 'JavaScript' Files
 Version: 0.1.0
 Authors@R: c(
-    person(
-      "Stéphane", "Laurent", 
-      role = c("aut", "cre"), email = "laurent_step@outlook.fr"
-    ),
-    person(
-      "Anton", "Kovalyov",
-      role = "cph", comment = "'jshint' library"
-    )
+    person("Stéphane", "Laurent", , "laurent_step@outlook.fr", role = c("aut", "cre")),
+    person("Anton", "Kovalyov", role = "cph",
+           comment = "'jshint' library")
   )
 Maintainer: Stéphane Laurent <laurent_step@outlook.fr>
-Description: Allow to run 'jshint' on JavaScript files with a R command or a 'RStudio' addin. The report appears in the RStudio viewer pane.
-Imports: htmlwidgets, htmltools, rstudioapi, tools
+Description: Allow to run 'jshint' on 'JavaScript' files with a 'R'
+    command or a 'RStudio' addin. The report appears in the 'RStudio'
+    viewer pane.
+License: GPL-3
 URL: https://github.com/stla/jshintr
 BugReports: https://github.com/stla/jshintr/issues
-License: GPL-3
+Imports: 
+    htmltools,
+    htmlwidgets,
+    rstudioapi,
+    tools
 Encoding: UTF-8
 RoxygenNote: 7.2.0

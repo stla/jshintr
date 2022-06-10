@@ -14,7 +14,7 @@ jshintr(filepath, width = NULL, height = "auto", elementId = NULL)
 \item{elementId}{a HTML id for the widget (usually useless)}
 }
 \value{
-No returned value, the function just runs the widget.
+A \code{htmlwidget} object.
 }
 \description{
 HTML widget which runs 'jshint' on the given JavaScript file.

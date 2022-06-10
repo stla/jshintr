@@ -1,3 +1,6 @@
+This is a resubmission. I fixed the DESCRIPTION file.
+
+
 ## Testing environments
 
 - Local R-4.2.0, Windows 10
